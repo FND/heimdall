@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.1-alpha](https://github.com/dadrus/heimdall/compare/v0.13.0-alpha...v0.13.1-alpha) (2024-01-04)
+
+
+### Dependencies
+
+* update golang.org/x/exp digest to be819d1 ([#1120](https://github.com/dadrus/heimdall/issues/1120)) ([49293d5](https://github.com/dadrus/heimdall/commit/49293d58772954a3ad0d0c75b12f1bb13d62d61f))
+
 ## [0.13.0-alpha](https://github.com/dadrus/heimdall/compare/v0.12.0-alpha...v0.13.0-alpha) (2024-01-03)
 
 
