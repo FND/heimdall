@@ -13,7 +13,7 @@ Heimdall is a cloud-native, identity-aware proxy and access-control decision ser
 
 == Challenges addressed by Heimdall
 
-A typical (monolithic) system, or named it service, has not only to deal with the actual business logic, but also with authentication and authorization requirements (among other non-functional requirements) as depicted in the figure below.
+A typical (monolithic) system, or named it service [?], not only has to deal with the actual business logic but also with authentication and authorization requirements (among other non-functional requirements) as depicted in the figure below.
 
 [ditaa, format=svg]
 .A typical monolithic system
@@ -50,26 +50,26 @@ A typical (monolithic) system, or named it service, has not only to deal with th
           |    System        |                |                  | |
           |                  |                |                  | |
           +------------------+                +------------------+ |
-                                                -------------------+
+                                                +------------------+
 
 ....
 
 What do we have here?
 
-* To cover authentication requirements, that service will make use of some identity management system to verify the request authentication status.
-* The existing authorization requirements will most probably result in if else statements in code. Even such approaches are straight forward and easy to implement on the first sight, these are not easy to maintain and have many drawbacks (e.g. testing of particular use cases), and it becomes even more challenging when entering microservices.
+* To cover authentication requirements, that service will make use of an identity-management system to verify the request-authentication status.
+* The existing authorization requirements will most probably result in if-else statements in code. While such approaches might appear straightforward and easy to implement, they are not easy to maintain and have many drawbacks (e.g. testing of particular use cases). This becomes even more challenging whith microservices.
 
-How does it look then if we have microservices?
+What does it look like then if we have microservices?
 
 * Not every microservice will hold the entire information required for authorization purposes.
-* So, there will be a need to communicate to other services to get the required contextual information about the authenticated subject to be able to take the required authorization decision.
-* The management and maintenance of the authorization requirements will become even more challenging, as the implementation of these will usually be scattered across many services.
+* Thus there's a need to communicate with other services to retrieve information about the authenticated subject in order to make authorization decisions.
+* Management and maintenance of authorization requirements becomes even more challenging, as the respective implementation is usually scattered across many services.
 
-To overcome these dependencies, organizations either start pushing that contextual information into the identity management system, making it a god system with all resulting negative effects, or start using special purpose authorization systems, allowing managing the corresponding authorization policies outside the code.
+To overcome these dependencies, organizations either start pushing that contextual information into the identity-management system, turning it into a "god system" with all resulting negative effects, or start using special-purpose authorization systems to allow managing authorization policies outside the code.
 
-Even that approach reduces dependencies between the services and also the time to market, it introduces a new dependency, which all, or almost all services must make use of. And, most probably, the authorization system will also need to somehow retrieve contextual information for authorization policy evaluation purposes.
+Even though that approach reduces dependencies between services and can improve time to market, it introduces a new dependency, which (almost) all services must rely on. Most probably the authorization system will also need to obtain contextual information for authorization policy evaluation purposes.
 
-And we just started to scratch the top of the iceberg. What if our system, comprised from these microservices is implemented in different languages? Even there are many libraries and also frameworks addressing authentication challenges, usually we just want to make the lives of our developers easier by providing components, which work the same way for each and every language. So the setup depicted above, well become similar to the one depicted below.
+We've only just started scratching the tip of the iceberg. What if our system, comprised from these microservices, is implemented in different languages? While there are many libraries and frameworks addressing authentication challenges, usually we just want to make our developers' lives easier by providing components which work the same way for each and every language. So the setup depicted above, well become similar to the one depicted below.[?]
 
 [[_fig_typical_deployment_scenario]]
 .Typical microservice deployment scenario
