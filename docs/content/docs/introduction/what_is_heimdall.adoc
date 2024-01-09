@@ -96,7 +96,7 @@ We've only just started scratching the tip of the iceberg. What if our system, c
 +------------+   +-----------------+   |  +-------------------+  +----+--------+----+  +-----------------+  | |
                                        |                              |        |                            | |
                                        +------------------------------|--------|----------------------------+ |
-                                          ----------------------------|--------|------------------------------+
+                                          +---------------------------|--------|------------------------------+
                                            +--------------------------+        |
                                            |                                   |
                                            v                                   v
@@ -110,17 +110,17 @@ We've only just started scratching the tip of the iceberg. What if our system, c
                                                                        -------------------+
 ....
 
-Here, a new authentication proxy, typically deployed as a sidecar with each microservice (sometimes also as a central proxy), is introduced taking over the responsibility for the existing authentication challenges and unifying the corresponding implementation. But there are still many drawbacks and limitations, like those addressed by the following questions
+Here, a new authentication proxy, typically deployed as a sidecar with each microservice (sometimes also as a central proxy), assumes responsibility for existing authentication challenges and unifying the corresponding implementation. But there are still many drawbacks and limitations, like those addressed by the following questions:
 
-* What if there is a need to have multiple identity management systems, e.g. one for the customers and one for accessing administrative or backoffice related functionality of the system?
+* What if there is a need to have multiple identity-management systems, e.g. one for the customers and one for accessing administrative or back office-related functionality of the system?
 * What if there is a need to migrate from one authentication or authorization system to another?
 * What if there is a need to open the existing APIs?
-* What if there is a need to support multiple different clients, like browsers, like mobile apps, IoT devices, etc?
-* What if the business decides to change the existing authorization requirements, like introduction of a new subscription model, or alike, which would require additional information about our user, resulting in yet another dependency to some further service?
-* What if depending on the client, we need completely different authentication strategies or even protocols, like OAuth2 or OpenID Connect in one case, mTLS in another case and cookie based approach and yet another case?
-* How to ensure, that our microservice code does not implement shortcuts and thus does not compromise the security of the entire system? (And there are diverse options achieving that)
+* What if there is a need to support multiple different clients, like browsers, mobile apps, IoT devices etc.?
+* What if the business decides to change existing authorization requirements, e.g. introducting a new subscription model or alike, which would require additional information about our user, resulting in yet another dependency to yet another service?
+* What if depending on the respective client, we need completely different authentication strategies or even protocols, e.g. OAuth2 or OpenID Connect in one case, mTLS in another case and a cookie-based approach in yet another case?
+* How to ensure that our microservice code does not implement shortcuts and thus does not compromise the security of the entire system? (There are myriad options for that scenario.)
 * ...
 
-This is by far not an exhaustive list. But the main question related to it is what does all of that mean in sense of coordination-, implementation efforts and time-to-market?
+This is by far not an exhaustive list. But the main question related to it is what does all of that mean in sense of coordination and implementation efforts as well as time to market?
 
-This is exactly where heimdall can step in and help you to address these challenges, reduce the complexity of your code, free resources, increase your time to market and make your system more secure.
+This is exactly where heimdall can step in and help you address these challenges, reduce the complexity of your code, free up resources, increase your time to market and make your system more secure.
