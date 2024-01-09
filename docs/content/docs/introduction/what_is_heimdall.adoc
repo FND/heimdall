@@ -9,7 +9,7 @@ menu:
     weight: 5
 ---
 
-Heimdall is a cloud-native, identity-aware proxy and access-control decision service inspired by the [zero-trust idea](https://en.wikipedia.org/wiki/Zero_trust_security_model). It manages authentication and authorization, helping you scale and secure your services by transparently adding security capabilities with secure defaults. Heimdall can be operated in stand-alone mode or integrated into existing proxies and API gateways. You might think of it as an orchestrator for authentication and authorization systems, residing in front of your services while maintaining complete control without the need for any type of maintenance in your own code.
+Heimdall is a cloud-native, identity-aware proxy and access-control decision service inspired by the https://en.wikipedia.org/wiki/Zero_trust_security_model[zero-trust idea]. It manages authentication and authorization, helping you scale and secure your services by transparently adding security capabilities with secure defaults. Heimdall can be operated in stand-alone mode or integrated into existing proxies and API gateways. You might think of it as an orchestrator for authentication and authorization systems, residing in front of your services while maintaining complete control without the need for any type of maintenance in your own code.
 
 == Challenges addressed by Heimdall
 
